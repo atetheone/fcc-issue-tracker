@@ -1,6 +1,4 @@
 const { Issue } = require("../models/issue.schema");
-const { Project } = require("../models/project.schema");
-
 const getIssues = async (project, filter={}) => {
   let issues;
   try {
