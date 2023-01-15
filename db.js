@@ -19,7 +19,7 @@ const startDB = async (app, port) => {
             console.log('Tests are not valid:');
             console.error(e);
           }
-        }, 15000);
+        }, 1500);
       }
     });
   } catch (err) {
