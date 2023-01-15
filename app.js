@@ -2,7 +2,7 @@
 
 const express     = require('express');
 const cors        = require('cors');
-
+const fccTestingRoutes  = require('./routes/fcctesting.js');
 const { indexRouter } = require('./routes/index');
 const { apiRouter } = require('./routes/api');
 
@@ -12,13 +12,14 @@ app.use('/public', express.static(process.cwd() + '/public'));
 
 app.use(cors()); //For FCC testing purposes only
 
-
+fccTestingRoutes(app);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
 app.use(indexRouter);
+
 
 //Routing for API 
 app.use(apiRouter);
