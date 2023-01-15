@@ -26,7 +26,7 @@ const addIssue = async (project, issue_title, issue_text, assigned_to, status_te
   await issue.save();
   // delete issue.project;
   // console.log("-------------------------");
-  console.log(`issueSave: ${issue}`);
+  // console.log(`issueSave: ${issue}`);
   // console.log("-------------------------");
 
   return issue;
@@ -47,7 +47,7 @@ const updateIssue = async (project, _id, issue_title, issue_text, assigned_to, s
       },
       { new: true }
     );
-    console.log(`issueUpdate: ${result}`);
+    // console.log(`issueUpdate: ${result}`);
 
     // delete issue.project;
     // console.log(`issue: ${result}`);
